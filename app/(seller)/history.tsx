@@ -101,29 +101,47 @@ export default function History() {
       </ScrollView>
 
       {/* Bottom Nav Bar */}
-      <View className="absolute bottom-6 left-6 right-6 flex-row justify-around items-center px-4 py-3 bg-white/70 backdrop-blur-xl border border-white/30 shadow-lg rounded-full">
-        <Link href="/(buyer)/home" className="flex-col items-center justify-center">
-          <MaterialIcons name="home" size={22} color="#44474f" />
-          <Text className="text-xs font-semibold text-on-surface-variant">Home</Text>
-        </Link>
-        <Link href="/(buyer)/favorites" className="flex-col items-center justify-center">
-          <MaterialIcons name="favorite" size={22} color="#44474f" />
-          <Text className="text-xs font-semibold text-on-surface-variant">Favorites</Text>
-        </Link>
-        <View className="-mt-6">
-          <Link href="/(buyer)/home" className="w-16 h-16 bg-primary rounded-full items-center justify-center shadow-lg">
-            <MaterialIcons name="search" size={32} color="#fff" />
-          </Link>
-        </View>
-        <Link href="/(buyer)/schedule-appointment" className="flex-col items-center justify-center">
-          <MaterialIcons name="calendar-today" size={22} color="#44474f" />
-          <Text className="text-xs font-semibold text-on-surface-variant">Appointments</Text>
-        </Link>
-        <Link href="/(buyer)/history" className="flex-col items-center justify-center">
-          <MaterialIcons name="person" size={22} color="#835400" />
-          <Text className="text-xs font-bold text-secondary">Profile</Text>
-        </Link>
-      </View>
+<View className="absolute bottom-6 left-6 right-6 flex-row items-center bg-white/70 backdrop-blur-xl border border-white/30 shadow-lg rounded-full px-2 py-3">
+  <View className="flex-1 flex-row justify-evenly">
+    <Link href="/(buyer)/home" asChild>
+      <TouchableOpacity className="flex-col items-center justify-center">
+        <MaterialIcons name="home" size={22} color="#44474f" />
+        <Text className="text-xs font-semibold text-on-surface-variant">Home</Text>
+      </TouchableOpacity>
+    </Link>
+    <Link href="/(buyer)/favorites" asChild>
+      <TouchableOpacity className="flex-col items-center justify-center">
+        <MaterialIcons name="favorite" size={22} color="#44474f" />
+        <Text className="text-xs font-semibold text-on-surface-variant">Favorites</Text>
+      </TouchableOpacity>
+    </Link>
+  </View>
+
+  <Link href="/(buyer)/ai-assistant" asChild>
+    <TouchableOpacity className="w-16 h-16 -mt-10 bg-primary rounded-full items-center justify-center shadow-lg z-10">
+      <MaterialIcons name="search" size={28} color="#fff" />
+    </TouchableOpacity>
+  </Link>
+
+  <View className="flex-1 flex-row justify-evenly">
+    <Link href="/(buyer)/schedule-appointment" asChild>
+      <TouchableOpacity className="flex-col items-center justify-center">
+        <MaterialIcons name="calendar-today" size={22} color="#44474f" />
+        <Text className="text-xs font-semibold text-on-surface-variant">Appointments</Text>
+      </TouchableOpacity>
+    </Link>
+    <Link href="/(buyer)/profile" asChild>
+      <TouchableOpacity 
+       className="flex-col items-center justify-center gap-0.5"
+       hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+     >
+        <MaterialIcons name="person" size={22} color="#835400" />
+        <Text className="text-xs font-bold text-secondary">Profile</Text>
+        <View className="w-1 h-1 rounded-full bg-secondary" />
+      </TouchableOpacity>
+    </Link>
+  </View>
+</View>
     </View>
   );
 }

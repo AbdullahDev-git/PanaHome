@@ -55,18 +55,18 @@ export default function Login() {
         contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', padding: 20 }}
         keyboardShouldPersistTaps="handled"
       >
-        <View className="w-full max-w-[440px] self-center items-center">
-          <View className="mb-10 items-center">
-            <View className="w-16 h-16 bg-primary rounded-2xl items-center justify-center mb-6 shadow-xl rotate-3">
-              <MaterialIcons name="architecture" size={32} color="#fff" />
+        <View className="w-full max-w-[380px] self-center items-center">
+          <View className="mb-6 items-center">
+            <View className="w-12 h-12 bg-primary rounded-2xl items-center justify-center mb-3 shadow-xl rotate-3">
+              <MaterialIcons name="architecture" size={24} color="#fff" />
             </View>
-            <Text className="text-[28px] font-bold text-on-surface mb-2">Welcome back</Text>
+            <Text className="text-[22px] font-bold text-on-surface mb-1">Welcome back</Text>
             <Text className="text-on-surface-variant text-base">
               Enter your credentials to access your properties.
             </Text>
           </View>
 
-          <View className="w-full bg-surface-container-lowest rounded-[20px] p-8 shadow-lg border border-outline-variant/20">
+          <View className="w-full bg-surface-container-lowest rounded-[16px] p-4 shadow-lg border border-outline-variant/20">
             <TextInput
               value={email}
               onChangeText={setEmail}
@@ -76,7 +76,7 @@ export default function Login() {
               autoCapitalize="none"
               className="w-full h-14 bg-surface-container-low rounded-full px-6 text-on-surface"
             />
-            <View className="h-4" />
+            <View className="h-3" />
             <View className="relative">
               <TextInput
                 value={password}
@@ -107,7 +107,7 @@ export default function Login() {
             <TouchableOpacity
               onPress={handleLogin}
               disabled={loading}
-              className="w-full bg-primary py-4 rounded-full items-center mt-6 shadow-lg active:scale-[0.96]"
+              className="w-full bg-primary py-3 rounded-full items-center mt-4 shadow-lg active:scale-[0.96]"
             >
               {loading ? (
                 <ActivityIndicator color="#fff" />
@@ -118,7 +118,7 @@ export default function Login() {
               )}
             </TouchableOpacity>
 
-            <View className="my-8 flex-row items-center">
+            <View className="my-4 flex-row items-center">
               <View className="flex-1 border-t border-outline-variant" />
               <Text className="px-4 text-xs text-on-surface-variant uppercase tracking-widest">
                 Or connect with
@@ -138,16 +138,8 @@ export default function Login() {
             </View>
           </View>
 
-          <View className="mt-10 flex-col items-center gap-4">
-            <TouchableOpacity className="w-14 h-14 rounded-full bg-secondary-fixed items-center justify-center">
-              <MaterialIcons name="fingerprint" size={28} color="#714800" />
-            </TouchableOpacity>
-            <Text className="text-xs text-on-surface-variant font-medium">
-              Quick login with Face ID / Fingerprint
-            </Text>
-          </View>
 
-          <View className="mt-10">
+          <View className="mt-5">
             <Text className="text-on-surface-variant text-base">
               Don{`'`}t have an account?{' '}
               <Link href="/(auth)/signup" className="text-secondary font-bold">
