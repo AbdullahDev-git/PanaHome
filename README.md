@@ -1,6 +1,6 @@
 # PanaHome
 
-AI-Powered AR Real Estate Platform with 6-Photo Virtual Walkthrough and Furniture Placement
+AI-Powered AR Real Estate Platform with Multiple Photos Virtual Walkthrough and Furniture Placement
 
 ## Tech Stack
 - React Native (Expo)
