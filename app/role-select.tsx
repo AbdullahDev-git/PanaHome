@@ -9,9 +9,9 @@ export default function RoleSelect() {
   return (
     <View className="flex-1 bg-background">
       <View className="flex-1 justify-center px-8">
-        <View className="items-center mb-10">
-          <View className="w-20 h-20 bg-primary rounded-[22px] items-center justify-center shadow-xl mb-6">
-            <MaterialIcons name="home" size={40} color="#fff" />
+        <View className="items-center mb-10 mb-6">
+          <View className="w-14 h-14 bg-primary rounded-[18px] items-center justify-center shadow-xl mb-6">
+            <MaterialIcons name="home" size={28} color="#fff" />
           </View>
           <Text className="text-[30px] font-bold text-primary text-center">How will you use PanaHome?</Text>
           <Text className="text-on-surface-variant text-base text-center mt-3 leading-6 max-w-[300px]">
